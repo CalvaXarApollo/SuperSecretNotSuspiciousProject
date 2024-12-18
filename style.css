@@ -119,7 +119,7 @@ body {
 }
 
 /* figure out why tf the sizing only works when I create them seperately */
-.puzzle-image1 { 
+.puzzle-image { 
     width: 100%;
     max-width: 200px;
     margin-top: 20px; 

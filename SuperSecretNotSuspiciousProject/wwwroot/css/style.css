@@ -18,7 +18,7 @@ p {font-family: "Montserrat", system-ui;
     margin-bottom: 20px;}
 
 body {
-    background-image: url('/Users/sophielucassen/Desktop/Escape Room/Images/bg 2.jpg');
+    background-image: url('/img/bg 2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -37,7 +37,6 @@ body {
     text-align: center;
     margin: 20px; 
 }
-
 
 .header h1 {
     font-family: "Pirata One", system-ui;
@@ -58,7 +57,6 @@ body {
     margin-bottom: 20px; 
     line-height: 1.6; 
 }
-
 
 .start-button {
     padding: 10px 20px;
@@ -118,38 +116,10 @@ body {
     font-size: medium;
 }
 
-/* figure out why tf the sizing only works when I create them seperately */
-.puzzle-image1 { 
+
+.puzzle-image { 
     width: 100%;
     max-width: 200px;
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-}
-
-.puzzle-image2 { 
-    width: 100%;
-    max-width: 100px;
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-}
-
-.puzzle-image3 { 
-    width: 100%;
-    max-width: 100px;
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-}
-
-.puzzle-image4 { 
-    width: 100%;
-    max-width: 100px;
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-}
-
-.puzzle-image5 { 
-    width: 100%;
-    max-width: 100px;
     margin-top: 20px; 
     margin-bottom: 20px; 
 }
@@ -179,19 +149,16 @@ body {
     text-align: center;
 }
 
-
 .puzzle-button:hover {
     background-color: #fff; 
     color: #333; 
     transform: scale(1.05); 
 }
 
-
 .puzzle-button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); 
 }
-
 
 @media (max-width: 600px) {
     .puzzle-button {
@@ -199,7 +166,6 @@ body {
         font-size: 1.2rem; 
     }
 }
-
 
 #loop-input, #coordinate-input, #time-input, #timeline-input #rift-input {
     padding: 12px 20px;
@@ -231,7 +197,6 @@ body {
     border-color: #ff9900; 
     box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); 
 }
-
 
 @media (max-width: 600px) {
     #loop-input, #coordinate-input, #time-input, #timeline-input, #rift-input {
