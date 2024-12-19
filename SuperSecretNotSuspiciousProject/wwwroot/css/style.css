@@ -167,7 +167,7 @@ body {
     }
 }
 
-#loop-input, #coordinate-input, #time-input, #timeline-input #rift-input {
+#loop-input, #coordinate-input, #time-input, #timeline-input #rift-input #secret-letter-input {
     padding: 12px 20px;
     background-color: #fff; 
     color: #333; 
@@ -183,23 +183,23 @@ body {
     transition: border-color 0.3s ease, box-shadow 0.2s ease; 
 }
 
-#loop-input::placeholder, #coordinate-input::placeholder, #time-input::placeholder, #rift-input::placeholder {
+#loop-input::placeholder, #coordinate-input::placeholder, #time-input::placeholder, #rift-input::placeholder #secret-letter-input::placeholder {
     color: #888; 
     font-style: italic; 
 }
 
-#loop-input:hover, #coordinate-input:hover, #time-input:hover, #timeline-input:hover, #rift-input:hover {
+#loop-input:hover, #coordinate-input:hover, #time-input:hover, #timeline-input:hover, #rift-input:hover, #secret-letter-input:hover {
     border-color: #555; 
 }
 
-#loop-input:focus, #coordinate-input:focus, #time-input:focus, #timeline-input:focus, #rift-input:focus {
+#loop-input:focus, #coordinate-input:focus, #time-input:focus, #timeline-input:focus, #rift-input:focus, #secret-letter-input:focus {
     outline: none; 
     border-color: #ff9900; 
     box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); 
 }
 
 @media (max-width: 600px) {
-    #loop-input, #coordinate-input, #time-input, #timeline-input, #rift-input {
+    #loop-input, #coordinate-input, #time-input, #timeline-input, #rift-input, #secret-letter-input {
         padding: 15px 25px;
         font-size: 1.2rem;
     }
