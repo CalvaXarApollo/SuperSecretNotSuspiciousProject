@@ -178,6 +178,7 @@ body {
     width: 100%; 
     max-width: 400px; 
     margin-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
     box-sizing: border-box; 
     transition: border-color 0.3s ease, box-shadow 0.2s ease; 
