@@ -1,15 +1,27 @@
-// generic answer checker
-function checkAnswer(correctAnswer) {
-    const input = document.getElementById('coordinate-input').value;
+// Function to clear input fields
+function clearInputs() {
+    document.getElementById('coordinate-input').value = '';
+    document.getElementById('secret-letter-input').value = '';
+}
 
-    if (input.toLowerCase() === correctAnswer.toLowerCase()) {
-        document.getElementById('coordinate-input').value = '';
-        return true;
+// Generic answer checker
+function checkAnswer(correctAnswer) {
+    const coordinateInput = document.getElementById('coordinate-input')?.value;
+    const secretLetterInput = document.getElementById('secret-letter-input')?.value;
+
+    // Ensure inputs are not null
+    if (coordinateInput && secretLetterInput) {
+        // Check if both the coordinate input and secret letter input are correct
+        if (coordinateInput.toLowerCase() === correctAnswer.coordinate.toLowerCase() && 
+            secretLetterInput.toLowerCase() === correctAnswer.secretLetter.toLowerCase()) {
+            
+            clearInputs();
+            return true;
+        }
     }
 
     return false;
 }
-
 
 const storyLines = [
     "Through a mishap of thy own making, a great rift hath torn the fabric of reality, propelling thee into ancient times.",
@@ -21,10 +33,21 @@ const storyLines = [
 
 const typeSpeed = 50; // Typing speed in ms per character
 
-// Function for typewriter effect
+function typeWriterEffect(element, text, callback) {
+    let charIndex = 0;
+    const interval = setInterval(() => {
+        element.textContent += text[charIndex];
+        charIndex++;
+        if (charIndex === text.length) {
+            clearInterval(interval);
+            callback();
+        }
+    }, typeSpeed);
+}
+
 function displayStory() {
-    // Clear home screen
-    document.querySelector('.container').innerHTML = `
+    const container = document.querySelector('.container');
+    container.innerHTML = `
         <div class="story-screen">
             <div id="story-content" class="story-text"></div>
         </div>
@@ -33,29 +56,15 @@ function displayStory() {
     const storyContent = document.getElementById('story-content');
     let currentLine = 0;
 
-    function typeLine() {
+    function typeNextLine() {
         if (currentLine < storyLines.length) {
-            const line = storyLines[currentLine];
-            let charIndex = 0;
-
-            const interval = setInterval(() => {
-                storyContent.textContent += line[charIndex];
-                charIndex++;
-
-                if (charIndex === line.length) {
-                    clearInterval(interval);
-                    currentLine++;
-
-                    // Add spacing between lines and scroll to the bottom of the story
-                    setTimeout(() => {
-                        storyContent.textContent += "\n\n";
-                        storyContent.scrollTop = storyContent.scrollHeight; // Auto-scroll to bottom
-                        typeLine();
-                    }, 1000); // Pause before adding the next line
-                }
-            }, typeSpeed);
+            typeWriterEffect(storyContent, storyLines[currentLine], () => {
+                currentLine++;
+                storyContent.textContent += "\n\n"; // Add spacing between lines
+                storyContent.scrollTop = storyContent.scrollHeight; // Auto-scroll to bottom
+                setTimeout(typeNextLine, 1000); // Pause before adding the next line
+            });
         } else {
-
             setTimeout(() => {
                 const continueButton = document.createElement('button');
                 continueButton.textContent = "Continue Thy Quest";
@@ -68,10 +77,10 @@ function displayStory() {
         }
     }
 
-    typeLine();
+    typeNextLine();
 }
 
-
+// Function to redirect to the congratulations page
 function congratulations() {
     window.location.href = '/Congratulations';
 }
