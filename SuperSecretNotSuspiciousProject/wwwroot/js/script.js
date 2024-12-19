@@ -5,22 +5,30 @@ function clearInputs() {
 }
 
 // Generic answer checker
-function checkAnswer(correctAnswer) {
-    const coordinateInput = document.getElementById('coordinate-input')?.value;
+function checkAnswer(correctAnswer, secretLetter) {
+    const answerInput = document.getElementById('coordinate-input')?.value;
     const secretLetterInput = document.getElementById('secret-letter-input')?.value;
 
-    // Ensure inputs are not null
-    if (coordinateInput && secretLetterInput) {
-        // Check if both the coordinate input and secret letter input are correct
-        if (coordinateInput.toLowerCase() === correctAnswer.coordinate.toLowerCase() && 
-            secretLetterInput.toLowerCase() === correctAnswer.secretLetter.toLowerCase()) {
-            
-            clearInputs();
-            return true;
-        }
+    if (answerInput.toLowerCase() === correctAnswer.toLowerCase() &&
+        secretLetterInput.toLowerCase() === secretLetter.toLowerCase()) {
+
+        clearInputs();
+        return "both";
+    }
+    
+    if (answerInput.toLowerCase() === correctAnswer.toLowerCase()) {
+
+        clearInputs();
+        return "answer";
+    }
+    
+    if (secretLetterInput.toLowerCase() === secretLetter.toLowerCase()) {
+
+        clearInputs();
+        return "secret";
     }
 
-    return false;
+    return "neither";
 }
 
 const storyLines = [
@@ -84,3 +92,25 @@ function displayStory() {
 function congratulations() {
     window.location.href = '/Congratulations';
 }
+
+
+let times = ['3:34', '6:57', '12:04', '9:40']; // Time values for glitch
+let currentTime = 0;
+
+// Wait until the DOM is fully loaded before starting the interval
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded and parsed');
+    // Update the clock every second to simulate glitchy behavior
+    setInterval(() => {
+        // Update the clock text
+        const clockElement = document.getElementById('clock');
+
+        // Ensure clockElement exists before updating
+        if (clockElement) {
+            clockElement.innerText = times[currentTime];
+            currentTime = (currentTime + 1) % times.length; // Loop through the time array
+        } else {
+            console.error('Clock element not found!');
+        }
+    }, 500);
+});

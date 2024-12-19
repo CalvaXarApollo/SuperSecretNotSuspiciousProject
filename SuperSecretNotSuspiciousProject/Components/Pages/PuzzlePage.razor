@@ -8,7 +8,11 @@
     <div class="container">
         <img src="img/@_currentPuzzle.ImageUrl" alt="Puzzle Element" class="puzzle-image">
         <h1>@_currentPuzzle.Heading</h1>
-        <p>@_currentPuzzle.Question</p>
+        <p>@((MarkupString)(_currentPuzzle.Question?.Replace("\n", "<br/>") ?? ""))</p>
+        @if (_currentPuzzle.PuzzleSequenceId == 1)
+        {
+            <p id="clock"></p>
+        }
         <input type="text" id="coordinate-input" placeholder="Answer">
         <input type="text" id="secret-letter-input" placeholder="Secret Letter">
         <button  type="button" class="puzzle-button" @onclick="@CheckAnswer">Submit</button>

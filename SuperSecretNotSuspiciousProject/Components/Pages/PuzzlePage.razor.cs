@@ -25,9 +25,9 @@ public partial class PuzzlePage : ComponentBase
     {
         if (_currentPuzzle is null) return;
 
-        var result = await Js.InvokeAsync<bool>("checkAnswer", _currentPuzzle.Answer);
+        var result = await Js.InvokeAsync<string>("checkAnswer", _currentPuzzle.Answer, _currentPuzzle.SecretLetter);
 
-        if (result)
+        if (result == "both")
         {
             if (_snackbar != null)
                 await _snackbar.ShowMessage("Correct!", "snackbar-success");
@@ -42,6 +42,16 @@ public partial class PuzzlePage : ComponentBase
 
                 StateHasChanged();
             }
+        }
+        else if (result == "answer")
+        {
+            if (_snackbar != null)
+                await _snackbar.ShowMessage("Only the Answer is correct! Try again for the Secret Letter!", "snackbar-warning"); 
+        }
+        else if (result == "secret")
+        {
+            if (_snackbar != null)
+                await _snackbar.ShowMessage("Only the Secret Letter is correct! Try again for the Answer!", "snackbar-warning");
         }
         else
         {
