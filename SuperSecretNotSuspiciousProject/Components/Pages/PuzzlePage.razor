@@ -1,6 +1,15 @@
 @page "/"
+@inject IJSRuntime Js
 
 @if (_currentPuzzle != null)
 {
-    <h3>@_currentPuzzle.Question</h3>
+    <Snackbar @ref="_snackbar"/>
+    
+    <div class="container">
+        <img src="img/@_currentPuzzle.ImageUrl" alt="Puzzle Element" class="puzzle-image">
+        <h1>@_currentPuzzle.Heading</h1>
+        <p>@_currentPuzzle.Question</p>
+        <input type="text" id="coordinate-input" placeholder="Answer">
+        <button  type="button" class="puzzle-button" @onclick="@CheckAnswer">Submit</button>
+    </div>
 }

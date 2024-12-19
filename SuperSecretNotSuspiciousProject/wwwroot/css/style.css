@@ -1,0 +1,240 @@
+body, h1, h2, p, button, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+p {font-family: "Montserrat", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;}
+
+body {
+    background-image: url('/img/bg 2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; 
+}
+
+.container {
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px; 
+}
+
+.header h1 {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px; 
+}
+
+.header-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px; 
+}
+
+.p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 20px; 
+    line-height: 1.6; 
+}
+
+.start-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 100px; 
+}
+
+.start-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.story-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: transparent;
+}
+
+.story-text {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.8; 
+    max-width: 400px;
+    text-align: left;
+    color: black;
+    white-space: pre-line;
+    margin-bottom: 30px; 
+}
+
+.footer-image { 
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px; 
+    margin-bottom: 20px; 
+}
+
+.footer h2 {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+}
+
+
+.puzzle-image { 
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+.puzzle-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.puzzle-button {
+    padding: 12px 24px;
+    background-color: #333; 
+    color: #fff; 
+    font-family: "Pirata One", system-ui; 
+    font-size: 1rem; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
+    margin-top: 20px; 
+    width: 100%; 
+    max-width: 300px; 
+    text-align: center;
+}
+
+.puzzle-button:hover {
+    background-color: #fff; 
+    color: #333; 
+    transform: scale(1.05); 
+}
+
+.puzzle-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); 
+}
+
+@media (max-width: 600px) {
+    .puzzle-button {
+        padding: 15px 30px; 
+        font-size: 1.2rem; 
+    }
+}
+
+#loop-input, #coordinate-input, #time-input, #timeline-input #rift-input {
+    padding: 12px 20px;
+    background-color: #fff; 
+    color: #333; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1rem;
+    border: 2px solid #333; 
+    border-radius: 8px; 
+    width: 100%; 
+    max-width: 400px; 
+    margin-top: 10px;
+    text-align: center;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease, box-shadow 0.2s ease; 
+}
+
+#loop-input::placeholder, #coordinate-input::placeholder, #time-input::placeholder, #rift-input::placeholder {
+    color: #888; 
+    font-style: italic; 
+}
+
+#loop-input:hover, #coordinate-input:hover, #time-input:hover, #timeline-input:hover, #rift-input:hover {
+    border-color: #555; 
+}
+
+#loop-input:focus, #coordinate-input:focus, #time-input:focus, #timeline-input:focus, #rift-input:focus {
+    outline: none; 
+    border-color: #ff9900; 
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); 
+}
+
+@media (max-width: 600px) {
+    #loop-input, #coordinate-input, #time-input, #timeline-input, #rift-input {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+    }
+}
+
+.snackbar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    transition: opacity 0.5s ease, bottom 0.5s ease;
+}
+
+.snackbar-default {
+    background-color: #333;
+}
+
+.snackbar-success {
+    background-color: #4CAF50;
+}
+
+.snackbar-error {
+    background-color: #F44336;
+}
+
+.snackbar-warning {
+    background-color: #FFC107;
+}
+
+.snackbar-info {
+    background-color: #2196F3;
+}
