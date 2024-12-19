@@ -69,7 +69,7 @@ function checkCoordinates() {
     const input = document.getElementById('coordinate-input').value;
     const inputBox = document.getElementById('coordinate-input');
 
-    if (input.toLowerCase() === 'northfragment') {
+    if (input.toLowerCase() === '41.84201, -89.485937') {
         window.location.href = 'Puzzle2.html';  // Correct answer
     } else {
         alert('Try again!');
