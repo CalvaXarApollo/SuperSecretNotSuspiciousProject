@@ -48,7 +48,7 @@ public class PuzzleDal : IPuzzleDal
             {
                 PuzzleSequenceId = 4,
                 Heading = "Find the Phrase that Breaketh the Loop",
-                Question = "Time loops driveth all to madness, yet now the words themselves do loop as well. Red, black, and blue be the words of importance to thee, fill in the blanks below to reveal the whereabouts you need.\n\n- - - - - - - - - !   - - - - - -   - - - - - -.   - - - - - - - -   - - - - - -   - - - - - -.",
+                Question = "Time loops driveth all to madness, yet now the words themselves do loop as well. Red, black, and blue be the words of importance to thee, fill in the blanks below to reveal the whereabouts you need.\n\n- - - - - - - - -!/- - - - - -/- - - - - -./- - - - - - - -/- - - - - -/- - - - - -.",
                 Answer = "Alcatraz",
                 SecretLetter = 'S',
                 ImageUrl = "puzzle-element.png"
@@ -66,9 +66,10 @@ public class PuzzleDal : IPuzzleDal
             {
                 PuzzleSequenceId = 6,
                 Heading = "Save the Ales",
-                Question = "Thou thoughtst thy task complete, yet something still seemeth amiss. The ales are locked away, and we need them this very night! Unravel the code to free the ales, and once within, thou shalt find the answer thou seekest.",
+                Question = "Thou thoughtst thy task complete, yet something still seemeth amiss. The ales are locked away, and we need them this very night! Unravel the code to free the ales, and once within, thou shalt find the answer thou seekest.\n\nThe Secret Letter is X.",
                 Answer = "Quaffing",
-                ImageUrl = "puzzle-element5.png"
+                SecretLetter = 'X',
+                ImageUrl = "beer.png"
             }
         };
     }
