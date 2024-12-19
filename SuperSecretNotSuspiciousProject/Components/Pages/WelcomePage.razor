@@ -1,0 +1,20 @@
+@page "/"
+@inject IJSRuntime Js
+
+<div class="container">
+    <header class="header">
+        <h1>Welcome, Travellers!</h1>
+        <img src="img/HeaderElement.png" alt="Header Element" class="header-image">
+    </header>
+        
+    <section class="instructions">
+        <p>When thou art ready to begin this adventure, please press the button below.</p>
+    </section>
+
+    <button id="start-adventure" class="start-button" @onclick="@DisplayStory">Start Adventure</button>
+
+    <footer class="footer">
+        <h2>Made by Sam & Sophie!</h2>
+        <img src="img/FooterElement.png" alt="Footer Element" class="footer-image">
+    </footer>
+</div>
