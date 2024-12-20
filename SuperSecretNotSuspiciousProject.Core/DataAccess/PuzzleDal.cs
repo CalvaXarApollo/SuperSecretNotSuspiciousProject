@@ -15,7 +15,7 @@ public class PuzzleDal : IPuzzleDal
                 Question = "Not only hast thou been hurled into times of yore, but thine whereabouts seem strange as well. Unearth the proper marks to unveil thy locale. This must be the true name, and not but mere coordinates.\n\n\nUpon the compass, crowned in black,\n\nFind me waiting, no turning back.\n\nThe guiding star will point to who?\n\nForever constant, bold, and true.",
                 Answer = "Dixon",
                 SecretLetter = 'S',
-                ImageUrl = "puzzle-element2.png"
+                ImageUrl = "puzzle-element.png"
             },
             new()
             {
@@ -24,7 +24,7 @@ public class PuzzleDal : IPuzzleDal
                 Question = "The rift doth cause time to act most queerly here. The clock doth flicker 'twixt many hours. Enter the word hidden behind the true hour and bringeth steadiness to the rift.",
                 Answer = "Fief",
                 SecretLetter = 'X',
-                ImageUrl = "puzzle-element3.png"
+                ImageUrl = "puzzle-element2.png"
             },
             new()
             {
@@ -42,7 +42,7 @@ public class PuzzleDal : IPuzzleDal
                 Question = "The rift doth begin to settle, yet there be objects here that cause disturbance. Arrange their digits aright to still their shifting:\n\nHairy Cam’s, Bloat Pole, Huge Web Go, Squilerr",
                 Answer = "3701",
                 SecretLetter = 'I',
-                ImageUrl = "puzzle-element4.png"
+                ImageUrl = "puzzle-element3.png"
             },
             new()
             {
@@ -51,7 +51,7 @@ public class PuzzleDal : IPuzzleDal
                 Question = "Time loops driveth all to madness, yet now the words themselves do loop as well. Red, black, and blue be the words of importance to thee, fill in the blanks below to reveal the whereabouts you need.\n\n- - - - - - - - -!/- - - - - -/- - - - - -./- - - - - - - -/- - - - - -/- - - - - -.",
                 Answer = "Alcatraz",
                 SecretLetter = 'S',
-                ImageUrl = "puzzle-element.png"
+                ImageUrl = "puzzle-element4.png"
             },
             new()
             {
