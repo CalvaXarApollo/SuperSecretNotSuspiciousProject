@@ -167,7 +167,7 @@ body {
     }
 }
 
-#loop-input, #coordinate-input, #time-input, #timeline-input #rift-input #secret-letter-input {
+#loop-input, #coordinate-input, #time-input, #timeline-input, #rift-input, #secret-letter-input {
     padding: 12px 20px;
     background-color: #fff; 
     color: #333; 
@@ -184,7 +184,7 @@ body {
     transition: border-color 0.3s ease, box-shadow 0.2s ease; 
 }
 
-#loop-input::placeholder, #coordinate-input::placeholder, #time-input::placeholder, #rift-input::placeholder #secret-letter-input::placeholder {
+#loop-input::placeholder, #coordinate-input::placeholder, #time-input::placeholder, #rift-input::placeholder, #secret-letter-input::placeholder {
     color: #888; 
     font-style: italic; 
 }
